@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script configures /etc/hosts for localhost and facebook.com
 sed 's/127.0.0.1 localhost/127.0.0.2 localhost/' /etc/hosts > /tmp/hosts
 sed '/facebook.com/d' /tmp/hosts > /tmp/hosts_clean
 echo "8.8.8.8 facebook.com" >> /tmp/hosts_clean
